@@ -77,4 +77,19 @@
     Therefore, $q_x \neq q_y$. It follows that the function $f: D\to\mathbb Q$ where $f(d) = q_d, \ \forall d\in D$ is injective
     which implies $|D| \leq |\mathbb Q|$. Since $\mathbb Q$ is countable, $D$ is at most countable.
 
+    \section*{Durrett ed. 4, Problem 1.2.5}
+    Suppose $X$ has continuous density $f$, $P(\alpha \leq X \leq \beta) = 1$ and $g$ is a function that is strictly increasing and differentiable on $(\alpha, \beta)$.
+    Then $g(X)$ has density $f(g^{-1}(y)) / g'(g^{-1}(y))$ for $y\in(g(\alpha), g(\beta))$.\\
+
+    \textbf{Solution:}\\
+    By the definition of a distribution function and the fact that $g$ is strictly increasing function, we can write
+    \begin{align}
+        P(g(X) \leq z) = P(X \leq g^{-1}(z)) = F(g^{-1}(z)) = \int_{\alpha}^{g^{-1}(z)}f(x)dx.
+    \end{align}
+    Set $\xi = g(x)\implies dx = d\xi/g'(g^{-1}(\xi))$ and observe that 
+    \begin{align}
+        \int_{\alpha}^{g^{-1}(z)}f(x)dx = \int_{g(\alpha)}^z\frac{f(g^{-1}(\xi))}{g'(g^{-1}(\xi))}d\xi
+    \end{align}
+    which yields the desired result.
+
 \end{document}
